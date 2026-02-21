@@ -67,6 +67,11 @@ impl<'a> Message<'a> {
             Params::new(input, input, None)
         }
     }
+
+    /// Fetch the raw input `&str` backing this `Message`.
+    pub fn input_raw(&self) -> &str {
+        self.input
+    }
 }
 
 impl Display for Message<'_> {
